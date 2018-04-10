@@ -1,4 +1,8 @@
-from sensible_raw.loaders import loader
+try:
+    from sensible_raw.loaders import loader
+except ImportError:
+    print("Cannot load `sensible_raw.loaders.loader` submodule.")
+    pass
 import pandas as pd
 
 def get_datatype_period(datatype, period, sort=False):
